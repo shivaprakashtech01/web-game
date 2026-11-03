@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flying Rabbit | Fantasy Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="top-bar">
+            <div class="logo">🐰 FLYING RABBIT</div>
+            <button id="soundBtn" class="sound-btn">🔊</button>
+        </header>
+
+        <section class="game-wrapper">
+
+            <canvas id="gameCanvas"></canvas>
+
+            <div class="score-board">
+                <div class="score-box">
+                    <span>SCORE</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div class="score-box">
+                    <span>BEST</span>
+                    <strong id="bestScore">0</strong>
+                </div>
+            </div>
+
+            <!-- Start Screen -->
+            <div id="startScreen" class="overlay">
+                <div class="menu-card">
+                    <div class="rabbit-icon">🐰</div>
+                    <h1>Flying Rabbit</h1>
+                    <p>Enter a magical world of adventure!</p>
+
+                    <button id="startBtn" class="main-btn">
+                        START ADVENTURE
+                    </button>
+
+                    <p class="instructions">
+                        Tap or press SPACE to fly
+                    </p>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="gameOverScreen" class="overlay hidden">
+                <div class="menu-card">
+                    <div class="rabbit-icon">✨</div>
+                    <h1>Adventure Over!</h1>
+
+                    <p>Your Score</p>
+                    <div id="finalScore" class="final-score">0</div>
+
+                    <p id="resultMessage">
+                        Great adventure!
+                    </p>
+
+                    <button id="restartBtn" class="main-btn">
+                        PLAY AGAIN
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pause Screen -->
+            <div id="pauseScreen" class="overlay hidden">
+                <div class="menu-card">
+                    <h1>Paused</h1>
+                    <p>Take a little break!</p>
+                    <button id="resumeBtn" class="main-btn">
+                        RESUME
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="bottom-bar">
+            <span>✦ Magical Fantasy Adventure ✦</span>
+            <button id="pauseBtn">Ⅱ PAUSE</button>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

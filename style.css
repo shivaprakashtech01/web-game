@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #101b24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 900px;
+    background: #1c3040;
+    padding: 15px;
+    border-radius: 22px;
+    border: 1px solid #38566a;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px 15px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffe5a0;
+}
+
+.sound-btn,
+#pauseBtn {
+    background: #29485a;
+    color: #ffffff;
+    border: 1px solid #527186;
+    border-radius: 10px;
+    padding: 9px 13px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.sound-btn:hover,
+#pauseBtn:hover {
+    background: #345b72;
+}
+
+.game-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #9ce5e8;
+    aspect-ratio: 4 / 3;
+    max-height: 620px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.score-board {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.score-box {
+    background: rgba(23, 61, 75, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 12px;
+    padding: 8px 20px;
+    min-width: 85px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.score-box span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #bde8d8;
+    text-transform: uppercase;
+}
+
+.score-box strong {
+    font-size: 24px;
+    color: #fff4bd;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(16, 42, 56, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.menu-card {
+    width: min(360px, 95%);
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        #254c55,
+        #163440
+    );
+    border: 2px solid #b7dba4;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.rabbit-icon {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.menu-card h1 {
+    color: #ffe7a3;
+    font-size: clamp(24px, 5vw, 34px);
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #d0e9dc;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(
+        135deg,
+        #f8ce75,
+        #e9a94e
+    );
+    border: none;
+    border-radius: 13px;
+    color: #3d3020;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #aa743b;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+}
+
+.main-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #aa743b;
+}
+
+.instructions {
+    font-size: 12px;
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+}
+
+.final-score {
+    color: #ffe7a3;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 8px 0 15px;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px 5px;
+    font-size: 12px;
+    color: #b6d8ca;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .game-container {
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .game-wrapper {
+        aspect-ratio: 4 / 3;
+        max-height: 480px;
+    }
+
+    .menu-card {
+        padding: 20px 15px;
+    }
+
+    .rabbit-icon {
+        font-size: 45px;
+    }
+
+    .score-box {
+        padding: 6px 14px;
+        min-width: 70px;
+    }
+}
